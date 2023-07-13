@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    line-height: 1;
+}
+
+body {
+    background-color: #F5F6F8;
+
+}
+
+
+.sidebar-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    background-color: #313443;
+}
+
+.sidebar-navigation ul {
+    text-align: center;
+    color: white;
+}
+
+.sidebar-navigation li {
+    padding: 28px 0;
+    cursor: pointer;
+    transition: all ease-out 120ms;
+}
+
+.sidebar-navigation li i {
+    display: block;
+    font-size: 24px;
+    transition: all ease 450ms;
+}
+
+.sidebar-navigation li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: #313443;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 82px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+
+.sidebar-navigation li .tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+}
+
+.sidebar-navigation li:hover {
+    background-color: #22252E;
+}
+
+.sidebar-navigation li:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-navigation li.active {
+    background-color: #22252E;
+}
+
+.sidebar-navigation li.active i {
+    color: #98D7EC;
+}
+
+/* Responsive Styles */
+/*@media (max-width: 768px) {*/
+/*    .sidebar-navigation {*/
+/*        width: 100%;*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*    }*/
+
+/*    .sidebar-navigation ul {*/
+/*        display: flex;*/
+/*        flex-direction: row;*/
+/*        justify-content: space-around;*/
+/*    }*/
+
+/*    .sidebar-navigation li {*/
+/*        padding: 12px 0;*/
+/*        flex: 1;*/
+/*    }*/
+
+/*    .sidebar-navigation li i {*/
+/*        font-size: 20px;*/
+/*    }*/
+
+/*    .sidebar-navigation li .tooltip {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar-navigation {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: block;
+    }
+
+    .sidebar-navigation ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .sidebar-navigation li {
+        padding: 10px;
+        flex: 1 0 50%;
+        max-width: 50%;
+        box-sizing: border-box;
+    }
+
+    .sidebar-navigation li i {
+        font-size: 20px;
+    }
+
+    .sidebar-navigation li .tooltip {
+        display: none;
+    }
+}
